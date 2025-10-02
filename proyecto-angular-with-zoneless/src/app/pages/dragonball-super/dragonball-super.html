@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <h1 class="dragonball-super-title">Dragon Ball Super de Ruben ✨</h1>
+  <hr>
+
+  <section class="row mt-5">
+    <div class="col-12 col-sm-6">
+  <h3>Agregar personaje: <span class="dragonball-super-name">{{ name() }}</span></h3>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Nombre"
+        [value]="name()"
+        (input)="name.set(txtName.value)"
+        #txtName
+      >
+      <input
+        type="number"
+        class="form-control mt-2"
+        placeholder="Poder"
+        [value]="power()"
+        (input)="power.set(+txtPower.value)"
+        #txtPower
+      >
+      <button (click)="addCharacter()" class="btn btn-primary mt-2">Guardar</button>
+    </div>
+    <div class="col-12 col-sm-6">
+      <dragonball-character-list [characters]="characters()" listName="Lista dragon ball"/>
+    </div>
+  </section>
+</div>
