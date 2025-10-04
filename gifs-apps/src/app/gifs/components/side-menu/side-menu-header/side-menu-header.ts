@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { environment } from '@environments/environment'; 
 @Component({
   selector: 'app-side-menu-header',
   imports: [],
@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styles: ``
 })
 export class SideMenuHeader {
+  envs = environment;
 
 }
