@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-
+import { SideMenuHeader } from '../../components/side-menu/side-menu-header/side-menu-header';
+import { SideMenuOptions } from '../../components/side-menu/side-menu-options/side-menu-options';
 @Component({
   selector: 'app-dashboard-page',
-  imports: [],
+  imports: [SideMenuHeader, SideMenuOptions],
   templateUrl: './dashboard-page.html',
   styles: ``
 })
