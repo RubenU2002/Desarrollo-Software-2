@@ -1,35 +1,34 @@
-import { Component,output,signal } from '@angular/core';
-interface Character {
-  id: number;
-  name: string;
-  power: number;
-}
+import {Component, output, signal} from '@angular/core';
+import {Character} from '../../../interfaces/character.interface';
 
 @Component({
-  selector: 'app-character-add',
+  selector: 'dragonball-character-add',
   imports: [],
   templateUrl: './character-add.component.html',
   styles: ``
 })
-export class CharacterAdd {
-  public name = signal('');
-  public power = signal(0);
+
+export class CharacterAddComponent {
+  name = signal('');
+  power = signal(0);
   newCharacter = output<Character>();
-    addCharacter() {
-    if(!this.name() && !this.power() && this.power() < 0) {
+
+  addCharacter() {
+    if(!this.name() || !this.power() || this.power() < 0) {
       return;
     }
 
-    const newCharacter : Character = {
+    const objectCharacter: Character ={
       id: 1000,
       name: this.name(),
-      power: this.power()
+      power: this.power(),
     }
-    this.newCharacter.emit(newCharacter);
+    this.newCharacter.emit(objectCharacter);
     this.resetFields();
   }
+
   resetFields() {
-    this.name.set('');
-    this.power.set(0);
+    this.name.set('')
+    this.power.set(0)
   }
 }

@@ -1,25 +1,25 @@
 import { Routes } from '@angular/router';
-import { CounterPage } from './pages/counter/counter-page';
-import { CarPage } from './pages/car/car-page';
-import { Dragonball } from './pages/dragonball/dragonball';
-import { DragonballSuper } from './pages/dragonball-super/dragonball-super';
+import {CounterPageComponent} from './pages/counter/counter-page.component';
+import {CarComponent} from './pages/car/car.component';
+import {DragonballComponent} from './pages/dragonball/dragonball.component';
+import {DragonballSuperComponent} from './pages/dragonball-super/dragonball-super.component';
 
 export const routes: Routes = [
   {
     path: '',
-    component: CounterPage
+    component: CounterPageComponent
   },
   {
     path: 'car',
-    component: CarPage
+    component: CarComponent
   },
   {
     path: 'dragonball',
-    component: Dragonball
+    component: DragonballComponent
   },
   {
     path: 'dragonball-super',
-    component: DragonballSuper
+    component: DragonballSuperComponent,
   },
   {
     path: '**',

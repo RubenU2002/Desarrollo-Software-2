@@ -1,0 +1,49 @@
+<div class="min-h-screen flex items-center justify-center py-8">
+  <div class="container mx-auto px-4 max-w-2xl">
+    <div class="bg-white rounded-lg shadow-sm p-8 md:p-12 border border-gray-200">
+      <div class="text-center mb-8">
+        <div class="inline-flex items-center justify-center w-16 h-16 bg-gray-900 rounded-lg mb-4">
+          <span class="text-3xl font-bold text-white">#</span>
+        </div>
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+          Contador
+        </h1>
+        <p class="text-gray-600">Sistema de conteo</p>
+      </div>
+
+      <div class="bg-gray-50 rounded-lg p-6 md:p-8 mb-8 border border-gray-200">
+        <div class="grid grid-cols-2 gap-6">
+          <div class="text-center">
+            <div class="text-sm font-medium text-gray-500 mb-2 uppercase tracking-wide">Valor Normal</div>
+            <p class="text-5xl font-bold text-gray-900 tabular-nums">{{ counter }}</p>
+          </div>
+
+          <div class="text-center">
+            <div class="text-sm font-medium text-gray-500 mb-2 uppercase tracking-wide">Valor Signal</div>
+            <p class="text-5xl font-bold text-gray-900 tabular-nums">{{ counterSignal() }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-3">
+        <button
+          (click)="add(1)"
+          class="bg-gray-900 hover:bg-gray-800 text-white font-medium py-3 px-4 rounded-lg transition-colors">
+          + 1
+        </button>
+
+        <button
+          (click)="decrease(1)"
+          class="bg-gray-900 hover:bg-gray-800 text-white font-medium py-3 px-4 rounded-lg transition-colors">
+          - 1
+        </button>
+
+        <button
+          (click)="reset()"
+          class="bg-gray-200 hover:bg-gray-300 text-gray-900 font-medium py-3 px-4 rounded-lg transition-colors">
+          Reset
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
