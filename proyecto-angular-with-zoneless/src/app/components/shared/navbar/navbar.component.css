@@ -1,3 +1,23 @@
-.active {
-  @apply bg-gray-900 text-white font-semibold;
+:host {
+  display: block;
+}
+
+nav {
+  transition: box-shadow var(--transition-medium);
+}
+
+nav:hover {
+  box-shadow: 0 8px 24px rgba(17, 24, 39, 0.08);
+}
+
+a {
+  border-radius: 0.75rem;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+a.active {
+  background: var(--color-gray-900);
+  color: var(--color-surface) !important;
+  font-weight: 600;
+  box-shadow: 0 10px 22px rgba(17, 24, 39, 0.18);
 }
