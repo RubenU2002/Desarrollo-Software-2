@@ -1,6 +1,6 @@
 import { Component, signal, computed } from '@angular/core';
 import { CharacterList } from '../../components/dragonball/character-list/character-list';
-
+import { CharacterAdd } from '../../components/dragonball/character-add/character-add.component';
 interface Character {
   id: number;
   name: string;
@@ -9,7 +9,7 @@ interface Character {
 
 @Component({
   selector: 'app-dragonball-super',
-  imports: [CharacterList],
+  imports: [CharacterList, CharacterAdd],
   templateUrl: './dragonball-super.html'
 })
 export class DragonballSuper {
@@ -28,6 +28,9 @@ export class DragonballSuper {
       'text-danger': true,
     }
   })
+   viewCharacter(character: Character) {
+    console.log(character);
+  }
 
   addCharacter() {
     if(!this.name() && !this.power() && this.power() < 0) {
