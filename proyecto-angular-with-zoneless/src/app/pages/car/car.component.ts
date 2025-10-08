@@ -1,10 +1,8 @@
 import {Component, computed, signal} from '@angular/core';
-import {UpperCasePipe} from '@angular/common';
 
 @Component({
   selector: 'app-car',
   imports: [
-    UpperCasePipe
   ],
   templateUrl: './car.component.html'
 })
